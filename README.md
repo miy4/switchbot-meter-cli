@@ -1,0 +1,1 @@
+# switchbot-meter-cli
