@@ -9,7 +9,7 @@ import (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "sbmcli",
+	Use:   "sbm",
 	Short: "Command-line utility to get the temperature and humidity using the Switchbot Meter via BLE",
 	Long:  `Command-line utility to get the temperature and humidity using the Switchbot Meter via BLE.`,
 }
