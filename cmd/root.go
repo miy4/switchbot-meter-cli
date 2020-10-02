@@ -9,14 +9,9 @@ import (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "switchbot-meter-cli",
-	Short: "A brief description of your application",
-	Long: `A longer description that spans multiple lines and likely contains
-examples and usage of using your application. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Use:   "sbmcli",
+	Short: "Command-line utility to get the temperature and humidity using the Switchbot Meter via BLE",
+	Long:  `Command-line utility to get the temperature and humidity using the Switchbot Meter via BLE.`,
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
