@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"sync"
 	"time"
 
 	"github.com/go-ble/ble"
@@ -42,8 +41,6 @@ You can press ctrl-c to cancel the scan process.`,
 	},
 }
 
-var mutex = &sync.Mutex{}
-
 func advHandler(a ble.Advertisement) {
 	buf := bytes.NewBufferString(fmt.Sprintf("[%s] RSSI: %3d,", a.Addr(), a.RSSI()))
 	comma := ""
@@ -59,9 +56,7 @@ func advHandler(a ble.Advertisement) {
 		buf.WriteString(fmt.Sprintf("%s MD: %X", comma, a.ManufacturerData()))
 	}
 
-	mutex.Lock()
 	fmt.Println(buf.String())
-	mutex.Unlock()
 }
 
 func init() {
