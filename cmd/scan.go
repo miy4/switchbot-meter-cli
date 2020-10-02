@@ -9,7 +9,6 @@ import (
 	"github.com/go-ble/ble"
 	"github.com/miy4/switchbot-meter-cli/device"
 	"github.com/pkg/errors"
-
 	"github.com/spf13/cobra"
 )
 
